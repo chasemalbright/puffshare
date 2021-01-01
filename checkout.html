@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Puff Share/Check-out</title>
+    <meta name="description" content="This is the description">
+    <link rel="icon" href="Images/favicon-32x32.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet">
+  </head>
+
+
+
+
+  <body>
+    <header class="main-header">
+        <img class="logo-icon" src="Images/cloudicon-trimmy.png" alt="cloud">
+        <h1 class="band-name band-name-large">Puff Share</h1>
+    </header>
+
+
+    <section class="container content-section">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM, QUANTITY, TOTAL</span>
+
+        </div>
+        <div class="cart-items" id="inside">
+
+          <script type="text/javascript">
+
+            document.getElementById("inside").innerHTML = localStorage.getItem("productList");
+          </script>
+
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price" id="pricefinal">
+              <script type="text/javascript">
+                document.getElementById("pricefinal").innerHTML = localStorage.getItem("subtotal");
+              </script>
+            </span>
+        </div>
+
+    </section>
+
+
+    <div class="form-container">
+
+      <form action="https://formspree.io/f/xpzooqbg" method="POST" id="my-form">
+        <input name="name" type="text" class="feedback-input" placeholder="Name*" />
+        <input name="phonenumber" type="text" class="feedback-input" placeholder="Phone Number*" />
+        <input name="address" type="text" class="feedback-input" placeholder="address*" />
+        <input name="promo code" type="text" class="feedback-input" placeholder="Promo Code (optional)" />
+        <textarea name="text" class="feedback-input" placeholder="Delivery Instructions*"></textarea>
+
+
+        <input name="order" type="hidden" id="order-input-element" value=""/>
+        <input name="total" type="hidden" id="order-input-total" value="">
+
+        <script type="text/javascript">
+        // setting the value attribute of input element for orders as the the order infoArray
+          document.getElementById("order-input-element").value = localStorage.getItem("productList");
+          document.getElementById("order-input-total").value = localStorage.getItem("subtotal");
+
+        </script>
+
+
+
+        <input type="submit" value="PLACE ORDER" class="btn-order"/>
+      </form>
+
+
+
+
+
+    </div>
+
+
+
+
+
+        <footer class="main-footer success-foot">
+            <div class="container main-footer-container">
+                <h3 class="band-name-footer">Puff Share</h3>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+  </body>
+
+
+
+
+
+  <script src="checkout.js"></script>
+
+</html>
