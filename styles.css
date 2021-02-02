@@ -126,6 +126,7 @@ html, body {
 }
 
 .main-footer-container {
+    width: 100%;
     display: flex;
     align-items: center;
 }
@@ -522,7 +523,7 @@ textarea {
 
 .btn-order {
   margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
 }
 
 .success {
@@ -537,12 +538,12 @@ textarea {
 }
 
 .success-head {
-  margin: auto;
-  font-size: 4em;
-  font-family: "Ubuntu";
-  font-weight: normal;
-  color: rgb(26, 60, 117);
-  vertical-align: middle;
+    margin: auto;
+    font-size: 4em;
+    font-family: "Ubuntu";
+    font-weight: normal;
+    color: rgb(26, 60, 117);
+    vertical-align: middle;
 }
 
 .success-body-image {
@@ -595,5 +596,5 @@ textarea {
 }
 
 .success-foot {
-  margin-top: 400px;
+  margin-top: 450px;
 }
