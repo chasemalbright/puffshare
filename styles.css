@@ -598,3 +598,13 @@ textarea {
 .success-foot {
   margin-top: 450px;
 }
+
+.status-warning {
+    text-align: center;
+    color: red;
+    
+}
+
+#alert {
+    color: red;
+}
